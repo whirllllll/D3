@@ -13,7 +13,7 @@
 		d3.csv("./flower.csv",function(data){
 			var ln= data.length;
 			console.log(data);
-			var maxy= d3.max(data, function(d){return d.Y;});
+			var maxy= d3.max(data, function(d){return d.Y;})-d3.min(data, function(d){return d.Y;});
 			var lines= d3.line().x(function(d, i){return i*(width/ln)}).y(function(d){return height- d.Y*(height/maxy)});
 			ctrl.append("path").data([data]).attr("d", lines).attr("stroke", "blue").attr("fill", "none");
 
