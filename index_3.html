@@ -31,7 +31,7 @@ d3.csv("./cpi.csv",
     x.domain([0,d3.max(data, function(d){ return d.month; })] );
     y.domain([0, maxy]);
     ctrl.append("g")
-        .attr("transform", "translate("+margin.left+"," + height-margin.bottom + ")")
+        .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
     ctrl.append("g")  
       .call(d3.axisLeft(y));
