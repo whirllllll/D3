@@ -28,7 +28,7 @@ d3.csv("./cpi.csv",
     ctrl.append("path").data([data]).attr("d", lines).attr("stroke", "red").attr("fill", "none");
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);  
-    x.domain(d3.extent(data, function(d) { return d.month; }));
+    x.domain([0,d3.max(data, function(d){ return d.month; })] );
     y.domain([0, maxy]);
     ctrl.append("g")
         .attr("transform", "translate("+margin.left+"," + height-margin.bottom + ")")
