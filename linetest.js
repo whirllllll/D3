@@ -2,7 +2,7 @@ function linetest(){
   var margin= {top:20, right:20, left:20, bottom:20}
   var width = 1024-margin.left-margin.right;
   var height = 768-margin.top- margin.bottom;
-  var ctrl = d3.select("body.content").append("svg").attr("width", width).attr("height", height);
+  var ctrl = d3.select(".content").append("svg").attr("width", width).attr("height", height);
   d3.csv("https://whirllllll.github.io/D3/cpi.csv", 
     function(data)
     {
