@@ -11,7 +11,8 @@
     <div id='cloud'></div>
     <script type="text/javascript">
       d3.wordcloud()
-        .csv("https://whirllllll.github.io/D3/word.csv")
+        .csv("./word.csv"), function(data){
+          console.log(data);}
         .size([800, 400])
         .selector('#cloud')
         .words([{text: 'word', size: 5}, {text: 'cloud', size: 15}])
