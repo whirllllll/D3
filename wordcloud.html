@@ -10,13 +10,13 @@
   <body>
     <div id='wordcloud'></div>
     <script type="text/javascript">
-      d3.wordcloud()
-        .csv("./word.csv", function(data){
-          console.log(data);})
+      d3.csv("./word.csv", function(data){
+        console.log(data);
+        d3.wordcloud()
         .size([800, 400])
         .selector('#cloud')
         .words([{text: 'word', size: 5}, {text: 'cloud', size: 15}])
-        .start();
+        .start();});
     </script>
   </body>
 </html>
