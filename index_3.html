@@ -12,7 +12,7 @@ var width = 1024-margin.left-margin.right;
 var height = 768-margin.top- margin.bottom;
 var ctrl = d3.select("body").append("svg").attr("width", width+ margin.left+ margin.right).attr("height", height+ margin.top+ margin.bottom).append("g")
     .attr("transform","translate(" + margin.left + ","+margin.top+")");
-d3.csv("./cpi.csv", 
+d3.csv("csv/cpi.csv", 
   function(data)
   {
     var ln = data.length;

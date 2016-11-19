@@ -11,7 +11,7 @@
   <body>
     <div id='wordcloud'></div>
     <script>
-      d3.csv("./word.csv", function(data){
+      d3.csv("csv/word.csv", function(data){
         console.log(data);
         d3.wordcloud()
         .size([800, 400])
