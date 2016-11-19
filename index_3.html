@@ -17,7 +17,7 @@ d3.csv("./cpi.csv",
   {
     var ln = data.length;
     console.log(data);
-    var maxy = d3.max(data, function(d){ return d.p; });
+    var maxy = d3.max(data, function(d){ return d.p*1; });
     var lines = d3.line().x(function(d,i){return i*(width/ln);}).y(function(d){return height-d.p*(height/maxy)});
     ctrl.append("path").attr("d", function(d){
       return "M0,"+height+"L"+width+","+height;
